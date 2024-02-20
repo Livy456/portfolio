@@ -1,7 +1,45 @@
-body {
+:root {
+    --color-accent: antiquewhite;
+    accent-color: var(--color-accent);
+    /* background-color: antiquewhite; */
+    background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+body .h1{
 
     /* Set line height to 1.5 times the font size
        and use the 0S's UI font as the website font */
     font: 100%/1.5 system-ui;
-
+    /* max-width: 1000ch; */
+    margin-inline: auto;
+    /* margin-inline: max(1 em, (100% - 100ch) /2); */
+    /* display: contents; */
+    padding-left: 100ch; 
+    background-color: antiquewhite;      
 }
+
+nav{
+    display: flex;
+    padding-left: 1%;
+    margin-bottom: 1px;
+    /* background-color: rgb(239, 239, 239); */
+}
+
+a.current{
+    padding-bottom: 0.1em;
+    border-bottom-color:rgb(196, 155, 155);
+    border-bottom-width: 0.3em;
+}
+
+a{
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0.5em;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(151, 137, 137);
+}
+
+
