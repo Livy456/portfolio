@@ -31,6 +31,13 @@ a.current{
     border-bottom-width: 0.3em;
 }
 
+a:hover{
+    border-bottom-color: rgb(181, 101, 101);
+    border-bottom-width: 0.3em;
+    padding-bottom: 0.1em;
+    background-color: rgb(255, 236, 212);
+}
+
 a{
     flex: 1;
     text-decoration: none;
@@ -40,6 +47,49 @@ a{
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: rgb(151, 137, 137);
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+}
+
+input{
+    font:inherit;
+    /* display:block;
+    width: 100%;
+    text-align: center; */
+}
+
+textarea{
+    font:inherit;
+    display: block;
+    /* width: 100%;
+    padding-bottom: 10ch;
+    box-sizing: border-box; */
+}
+
+label{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    /* display: block;
+    text-align: left;
+    box-sizing: border-box;
+    margin-block: 10px; */
+}
+button{
+    grid-column: 1 / -1;
+    /* margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box; */
+}
+
+p{
+    font:inherit;
+    display: block;
+    /* text-align: center; */
 }
 
 
