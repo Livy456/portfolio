@@ -25,6 +25,24 @@ nav{
     /* background-color: rgb(239, 239, 239); */
 }
 
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+}
+
+article{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+h2{
+    margin: 0;
+}
+
 a.current{
     padding-bottom: 0.1em;
     border-bottom-color:rgb(196, 155, 155);
@@ -47,6 +65,10 @@ a{
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: rgb(151, 137, 137);
+}
+
+img{
+    max-width: 100%;
 }
 
 form{
@@ -91,5 +113,7 @@ p{
     display: block;
     /* text-align: center; */
 }
+
+
 
 
