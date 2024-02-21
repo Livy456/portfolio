@@ -5,8 +5,7 @@
     background-color: oklch(from var(--color-accent) 95% 5% h);
 }
 
-body .h1{
-
+body { 
     /* Set line height to 1.5 times the font size
        and use the 0S's UI font as the website font */
     font: 100%/1.5 system-ui;
@@ -14,8 +13,18 @@ body .h1{
     margin-inline: auto;
     /* margin-inline: max(1 em, (100% - 100ch) /2); */
     /* display: contents; */
-    padding-left: 100ch; 
-    background-color: antiquewhite;      
+    padding-left: 5ch; 
+    padding-right: 5ch;
+    background-color: antiquewhite;
+    /* border-bottom: 100ch;
+    border-bottom-color: burlywood ;       */
+}
+
+h1{
+    border-bottom: 5px;
+    border-bottom-color: rgb(167, 152, 133);
+    border-bottom-style: solid;
+    color:rgb(63, 13, 13);
 }
 
 nav{
@@ -43,10 +52,50 @@ h2{
     margin: 0;
 }
 
+.resume{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* grid-column: span 1 / -1; */
+}
+
+.resume h3{
+    color:rgb(151, 111, 62);
+    margin-bottom:1%;
+    font-size: larger;
+    /* background-color: bisque; */
+    background-color: rgb(255, 204, 136);
+    
+}
+
+.resume li{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 1em;
+    
+}
+
+/* h1{
+    width: 100%;
+    border-bottom: 10ch;
+    border-bottom-color: black;
+    
+} */
+
+section{
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 1 / -1;
+    border-bottom-color: rgb(176, 125, 125);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
+
 a.current{
     padding-bottom: 0.1em;
     border-bottom-color:rgb(196, 155, 155);
     border-bottom-width: 0.3em;
+    color: rgb(63, 13, 13);
+    font-weight: bold;
 }
 
 a:hover{
@@ -54,12 +103,14 @@ a:hover{
     border-bottom-width: 0.3em;
     padding-bottom: 0.1em;
     background-color: rgb(255, 236, 212);
+    font-weight: bold;
+    color: brown;
 }
 
 a{
     flex: 1;
     text-decoration: none;
-    color: inherit;
+    color: rgb(129, 34, 34);
     text-align: center;
     padding: 0.5em;
     border-bottom-width: 2px;
@@ -69,12 +120,34 @@ a{
 
 img{
     max-width: 100%;
+    /* border-color: chocolate;
+    border-style: solid; */
+    /* border-width: 5px; */
+}
+
+img:hover{
+    filter: opacity(75%);
 }
 
 form{
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1em;
+}
+
+li{
+    /* border-color: rgb(255, 188, 87);
+    border-width: 5px;
+    border-style: groove; */
+    margin-bottom: 4px;
+    padding: 10px;
+    background-color: bisque;
+    /* background-color: rgb(255, 204, 136); */
+}
+
+time{
+    font-style: oblique;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 input{
@@ -106,6 +179,33 @@ button{
     /* margin-top: 10px;
     width: 100%;
     box-sizing: border-box; */
+}
+
+.Education p{
+    /* grid-column: span 1 / -1; */
+    /* background-color: rgb(253, 216, 167); */
+    padding: 1ch;
+    background-color: rgb(249, 204, 149);
+    margin: 0px;
+
+}
+
+.Relevant_Experience p{
+    padding: 1ch;
+    background-color: rgb(249, 204, 149);
+    margin:0px;
+}
+
+.Academic_Projects p {
+    padding: 1ch;
+    background-color: rgb(249, 204, 149);
+    margin:0px;    
+} 
+
+.Community_Leadership p{
+    padding: 1ch;
+    background-color: rgb(249, 204, 149);
+    margin:0px; 
 }
 
 p{
