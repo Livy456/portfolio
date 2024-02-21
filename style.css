@@ -59,11 +59,12 @@ h2{
 }
 
 .resume h3{
-    color:rgb(151, 111, 62);
-    margin-bottom:1%;
+    color:rgb(91, 70, 46);
+    margin-bottom:0px;
     font-size: larger;
     /* background-color: bisque; */
-    background-color: rgb(255, 204, 136);
+    background-color: rgb(236, 164, 70);
+    /* margin */
     
 }
 
@@ -184,26 +185,29 @@ button{
 .Education p{
     /* grid-column: span 1 / -1; */
     /* background-color: rgb(253, 216, 167); */
-    padding: 1ch;
+    padding-top: 0px;
+    padding-left: 1ch;
     background-color: rgb(249, 204, 149);
-    margin: 0px;
+    margin-bottom: 1px;
 
 }
 
 .Relevant_Experience p{
-    padding: 1ch;
+    padding-top: 0px;
+    padding-left: 1ch;
     background-color: rgb(249, 204, 149);
     margin:0px;
 }
 
 .Academic_Projects p {
-    padding: 1ch;
+    padding-top: 0px;
+    padding-left: 1ch;
     background-color: rgb(249, 204, 149);
     margin:0px;    
 } 
 
 .Community_Leadership p{
-    padding: 1ch;
+    padding-left: 1ch;
     background-color: rgb(249, 204, 149);
     margin:0px; 
 }
