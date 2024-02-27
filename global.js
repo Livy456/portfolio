@@ -25,7 +25,7 @@ let pages = [
     {url: "https://livy456.github.io/portfolio/", title: "Portfolio"},
     {url: "resume/", title: "Resume"},
 ];
-// console.log("number of pages: ", pages.length);
+const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
 let nav = document.createElement("nav");
 document.body.prepend(nav);
@@ -36,17 +36,26 @@ for (let p of pages)
     let url = p.url;
     let title = p.title;
 
-    // create a 
+    // create link and add it to nav menu
     let a = document.createElement("a");
-    let link = document.createTextNode(title);
-    
-    a.appendChild(link);
-    a.title = title;
-    a.href = url  + "index.html";
 
-    // document.body.appendChild(a);
-    // console.log("a: ", a, " p:", p);
-    // document.body.prepend(a);
-    nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
+    // let link = document.createTextNode(title);
+    // a.appendChild(link);
+    // a.title = title;
+   
+    if (!ARE_WE_HOME && !url.startsWith("http"))
+    {
+        url = "../" + url;
+    }
+
+    // reassigning value for url using ternary operator
+    // url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url:url;
+
+    a.href = url;
+    a.textContent = title;
+    nav.append(a);
+
+    // a.href = url  + "index.html";
+    // nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
 
 }

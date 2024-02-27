@@ -151,6 +151,14 @@ time{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+p .biography{
+    font:inherit;
+    display: block;
+    /* text-align: center;
+    background-color: purple;
+    text-emphasis-color: white;; */
+}
+
 input{
     font:inherit;
     /* display:block;
@@ -212,11 +220,7 @@ button{
     margin:0px; 
 }
 
-p{
-    font:inherit;
-    display: block;
-    /* text-align: center; */
-}
+
 
 
 
