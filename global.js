@@ -38,10 +38,6 @@ for (let p of pages)
 
     // create link and add it to nav menu
     let a = document.createElement("a");
-
-    // let link = document.createTextNode(title);
-    // a.appendChild(link);
-    // a.title = title;
    
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
@@ -53,9 +49,20 @@ for (let p of pages)
 
     a.href = url;
     a.textContent = title;
+
+    if (a.host === location.host && a.pathname === location.pathname)
+    {
+        a.classList.add("current");
+    }
+
+    else if (a.host !== location.host)
+    {
+        a.target = "_blank";
+    }
+    // a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
+
     nav.append(a);
 
     // a.href = url  + "index.html";
     // nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
-
 }
