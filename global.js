@@ -19,11 +19,11 @@
 
 // Automatic Navigation Menu
 let pages = [
-    {url: "index.html", title: "Home"},
-    {url: "projects/index.html", title: "Projects"},
-    {url: "contact/index.html", title: "Contact"},
+    {url: "portfolio/index.html", title: "Home"},
+    {url: "portfolio/projects/index.html", title: "Projects"},
+    {url: "portfolio/contact/index.html", title: "Contact"},
     {url: "https://livy456.github.io/portfolio/", title: "Portfolio"},
-    {url: "resume/index.html", title: "Resume"},
+    {url: "portfolio/resume/index.html", title: "Resume"},
 ];
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
