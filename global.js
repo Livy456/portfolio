@@ -19,7 +19,7 @@
 
 // Automatic Navigation Menu
 let pages = [
-    {url: "portfolio/index.html", title: "Home"},
+    {url: "", title: "Home"},
     {url: "portfolio/projects/index.html", title: "Projects"},
     {url: "portfolio/contact/index.html", title: "Contact"},
     {url: "https://livy456.github.io/portfolio/", title: "Portfolio"},
@@ -41,7 +41,7 @@ for (let p of pages)
    
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
-        url = "../" + url;
+        url = "./" + url;
     }
 
     // reassigning value for url using ternary operator
