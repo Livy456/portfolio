@@ -41,13 +41,14 @@ for (let p of pages)
    
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
-        url = "../" + url;
+        url = "../" + url + "index.html";
         console.log("I am not home anymore!!");
     }
 
     if (ARE_WE_HOME)
     {
         url = "./" + url;
+        console.log("I am home!!");
         // might include index.html
     }
 
