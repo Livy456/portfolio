@@ -41,7 +41,8 @@ for (let p of pages)
    
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
-        url = "../portfolio/" + url + "index.html";
+        url = "../portfolio/" + url 
+        //+ "index.html";
     }
 
     // if (ARE_WE_HOME)
