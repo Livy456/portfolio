@@ -19,11 +19,11 @@
 
 // Automatic Navigation Menu
 let pages = [
-    {url: "index.html", title: "Home"},
-    {url: "projects/index.html", title: "Projects"},
-    {url: "contact/index.html", title: "Contact"},
+    {url: "", title: "Home"},
+    {url: "projects/", title: "Projects"},
+    {url: "contact/", title: "Contact"},
     {url: "https://livy456.github.io/portfolio/", title: "Portfolio"},
-    {url: "resume/index.html", title: "Resume"},
+    {url: "resume/", title: "Resume"},
 ];
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
@@ -44,10 +44,11 @@ for (let p of pages)
         url = "../" + url;
     }
 
-    if (ARE_WE_HOME)
-    {
-        url = "./" + url;
-    }
+    // if (ARE_WE_HOME)
+    // {
+    //     url = "./" + url;
+    //     // might include index.html
+    // }
 
     // reassigning value for url using ternary operator
     // url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url:url;
