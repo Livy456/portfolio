@@ -39,18 +39,21 @@ for (let p of pages)
     // create link and add it to nav menu
     let a = document.createElement("a");
 
-   console.log("before conditional!!");
+    // console.log("before conditional!!");
+    
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
-        console.log("before url change: ", url);
+        // console.log("before url change: ", url);
         url = "../" + url
-        console.log("url removing parent folder: ", url);
-        url = "../portfolio/" + url 
-        console.log("url afterwards: ", url);
+        
+        // console.log("url removing parent folder: ", url);
+        // url = "../portfolio/" + url 
+        
+        // console.log("url afterwards: ", url);
         //+ "index.html";
     }
     
-    console.log("after conditional");
+    // console.log("after conditional");
 
     // if (ARE_WE_HOME)
     // {
