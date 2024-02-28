@@ -54,15 +54,34 @@ for (let p of pages)
     {
         a.classList.add("current");
     }
+    // a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
 
     else if (a.host !== location.host)
     {
         a.target = "_blank";
     }
-    // a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
 
     nav.append(a);
+
+    // add option to change the color scheme of the page
+    document.body.insertAdjacentHTML("afterbegin", 
+    `<label class="color-scheme">
+        Theme:
+        <select>
+            <option value="light dark">Automatic</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    `);
+
+    let select = document.querySelector("label.color-scheme");
+    select.addEventListener("input", function (event){
+        // console.log("color scheme changed to", event.target.value);
+        document.documentElement.style.setProperty("color-scheme", event.target.value);
+    });
 
     // a.href = url  + "index.html";
     // nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
 }
+
