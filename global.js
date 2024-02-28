@@ -75,13 +75,18 @@ for (let p of pages)
     </label>
     `);
 
-    let select = document.querySelector("label.color-scheme");
+    let select = document.querySelector("select");
+    if ("colorScheme" in localStorage)
+    {   
+        document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+        select.value = localStorage.colorScheme;
+    }
+    
     select.addEventListener("input", function (event){
-        // console.log("color scheme changed to", event.target.value);
+        
         document.documentElement.style.setProperty("color-scheme", event.target.value);
+        localStorage.colorScheme = event.target.value;
     });
-
-    // a.href = url  + "index.html";
     // nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
 }
 
