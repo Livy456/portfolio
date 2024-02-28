@@ -42,7 +42,9 @@ for (let p of pages)
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
         // url = "../" + url
+        console.log("url beforehand: ", url);
         url = "../portfolio/" + url 
+        console.log("url afterwards: ", url);
         //+ "index.html";
     }
 
