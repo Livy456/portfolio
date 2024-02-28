@@ -42,13 +42,14 @@ for (let p of pages)
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
         url = "../" + url;
+        console.log("I am not home anymore!!");
     }
 
-    // if (ARE_WE_HOME)
-    // {
-    //     url = "./" + url;
-    //     // might include index.html
-    // }
+    if (ARE_WE_HOME)
+    {
+        url = "./" + url;
+        // might include index.html
+    }
 
     // reassigning value for url using ternary operator
     // url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url:url;
