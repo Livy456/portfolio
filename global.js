@@ -1,22 +1,3 @@
-// Automatic current page link
-// console.log("IT'S ALIVE!");
-// function getPageLinks (selector, context = document){
-//     return Array.from(context.querySelectorAll(selector));
-// }
-// let navLinks = getPageLinks("nav a");
-// // console.log("this is navLinks: ", navLinks);
-
-// // let test_array = [1, 2, 3, 4];
-// // console.log(test_array.find(n=> n > 2));
-// // console.log(location.pathname);
-// // console.log(location.host);
-
-// // link to current page will have the same
-// // host and pathname as the current page
-// let currentLink = navLinks.find(a => a.host === location.host  && a.pathname === location.pathname);
-// // ? operator in js handles undefined errors
-// currentLink?.classList.add("current");
-
 // Automatic Navigation Menu
 let pages = [
     {url: "", title: "Home"},
@@ -38,32 +19,11 @@ for (let p of pages)
 
     // create link and add it to nav menu
     let a = document.createElement("a");
-
-    // console.log("before conditional!!");
     
     if (!ARE_WE_HOME && !url.startsWith("http"))
     {
-        // console.log("before url change: ", url);
         url = "../" + url
-        
-        // console.log("url removing parent folder: ", url);
-        // url = "../portfolio/" + url 
-        
-        // console.log("url afterwards: ", url);
-        //+ "index.html";
     }
-    
-    // console.log("after conditional");
-
-    // if (ARE_WE_HOME)
-    // {
-    //     url = "./" + url;
-    //     console.log("I am home!!");
-    //     // might include index.html
-    // }
-
-    // reassigning value for url using ternary operator
-    // url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url:url;
 
     a.href = url;
     a.textContent = title;
@@ -72,7 +32,6 @@ for (let p of pages)
     {
         a.classList.add("current");
     }
-    // a.classList.toggle("current", a.host === location.host && a.pathname === location.pathname);
 
     else if (a.host !== location.host)
     {
@@ -105,6 +64,5 @@ for (let p of pages)
         document.documentElement.style.setProperty("color-scheme", event.target.value);
         localStorage.colorScheme = event.target.value;
     });
-    // nav.insertAdjacentHTML("beforeend", `<a href="${ url }"> ${ title }</a>`);
 }
 
